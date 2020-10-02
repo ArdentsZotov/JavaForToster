@@ -7,12 +7,21 @@ import java.util.Scanner;
 
 public class Calculator implements ICalculator {
 
-    public Calculator() {}
+    public Calculator() {
+    }
 
     public Double sumDoubleNumber() {
-        double firstNumber = inputDoubleNumber();
-        double secondNumber = inputDoubleNumber();
-        return Precision.round(firstNumber + secondNumber, 3);
+        return Precision.round(inputDoubleNumber() + inputDoubleNumber(), 4);
+    }
+
+    public Double minusDoubleNumber() { return Precision.round(inputDoubleNumber() - inputDoubleNumber(), 4); }
+
+    public Double multiplexDoubleNumber() {
+        return Precision.round(inputDoubleNumber() * inputDoubleNumber(), 4);
+    }
+
+    public Double divisionDoubleNumber() {
+        return Precision.round(inputDoubleNumber() / inputDoubleNumber(), 4);
     }
 
     private double inputDoubleNumber() {
@@ -23,4 +32,30 @@ public class Calculator implements ICalculator {
             return inputDoubleNumber();
         }
     }
+
+    /**
+     * Поиск максимально длинного слова из введенных;
+     * Пробельный символ " " не является разделителем слов;
+     */
+    public static void searchLongWord() {
+        int lengthWord = 0;
+        String word = "";
+        System.out.println("Для выхода введите Q");
+        do {
+
+            String newWord = new Scanner(System.in).nextLine();
+
+            if (newWord.equals("Q")) {
+                System.out.println(word);
+                return;
+            }
+
+            if (newWord.length()>lengthWord) {
+                word = newWord;
+                lengthWord = newWord.length();
+            }
+        }
+        while (true);
+    }
+
 }

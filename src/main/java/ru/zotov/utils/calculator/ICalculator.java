@@ -1,11 +1,17 @@
 package ru.zotov.utils.calculator;
 
+    /**
+     * Калькулятор и его основные 4-ре функции.
+     * @autor Zotov Artem
+     */
 public interface ICalculator {
 
-    /**
-     * @autor Zotov Artem
-     * @return Double - сумма двух вещественных чисел
-     *
-     */
     Double sumDoubleNumber();
+
+    Double minusDoubleNumber();
+
+    Double multiplexDoubleNumber();
+
+    Double divisionDoubleNumber();
+
 }
