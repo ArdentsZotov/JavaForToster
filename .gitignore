@@ -1,0 +1,14 @@
+*.class
+# Package Files #
+*.war
+*.ear
+*.zip
+*.iml
+*.log
+.html
+.project
+.metadata
+target/**
+JavaForToster.iml
+.idea
+
