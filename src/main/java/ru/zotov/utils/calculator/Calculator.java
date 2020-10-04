@@ -14,14 +14,21 @@ public class Calculator implements ICalculator {
         return Precision.round(inputDoubleNumber() + inputDoubleNumber(), 4);
     }
 
-    public Double minusDoubleNumber() { return Precision.round(inputDoubleNumber() - inputDoubleNumber(), 4); }
+    public Double minusDoubleNumber() {
+        return Precision.round(inputDoubleNumber() - inputDoubleNumber(), 4);
+    }
 
     public Double multiplexDoubleNumber() {
         return Precision.round(inputDoubleNumber() * inputDoubleNumber(), 4);
     }
 
     public Double divisionDoubleNumber() {
-        return Precision.round(inputDoubleNumber() / inputDoubleNumber(), 4);
+        double num1 =inputDoubleNumber();
+        double num2 =inputDoubleNumber();
+
+        if (num2==0) throw new ArithmeticException();
+
+        return num1/num2;
     }
 
     private double inputDoubleNumber() {
