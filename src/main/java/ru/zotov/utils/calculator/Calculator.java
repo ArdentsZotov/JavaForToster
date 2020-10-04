@@ -5,6 +5,7 @@ import org.apache.commons.math3.util.Precision;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+//* Могу) */
 public class Calculator implements ICalculator {
 
     public Calculator() {
