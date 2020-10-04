@@ -23,12 +23,27 @@ public class Calculator implements ICalculator {
     }
 
     public Double divisionDoubleNumber() {
-        double num1 =inputDoubleNumber();
-        double num2 =inputDoubleNumber();
+        double num1 = inputDoubleNumber();
+        double num2 = inputDoubleNumber();
+        if (num2 == 0) throw new ArithmeticException();
+        return num1 / num2;
+    }
 
-        if (num2==0) throw new ArithmeticException();
+    public Double sumDoubleNumber(double num1, double num2) {
+        return num1 + num2;
+    }
 
-        return num1/num2;
+    public Double minusDoubleNumber(double num1, double num2) {
+        return num1 - num2;
+    }
+
+    public Double multiplexDoubleNumber(double num1, double num2) {
+        return num1 * num2;
+    }
+
+    public Double divisionDoubleNumber(double num1, double num2) {
+        if (num2 == 0) throw new ArithmeticException();
+        return num1 / num2;
     }
 
     private double inputDoubleNumber() {
@@ -57,7 +72,7 @@ public class Calculator implements ICalculator {
                 return;
             }
 
-            if (newWord.length()>lengthWord) {
+            if (newWord.length() > lengthWord) {
                 word = newWord;
                 lengthWord = newWord.length();
             }
