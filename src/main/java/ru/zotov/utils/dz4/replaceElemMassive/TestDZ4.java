@@ -1,4 +1,4 @@
-package ru.zotov.utils.dz4;
+package ru.zotov.utils.dz4.replaceElemMassive;
 
 import java.util.Arrays;
 
