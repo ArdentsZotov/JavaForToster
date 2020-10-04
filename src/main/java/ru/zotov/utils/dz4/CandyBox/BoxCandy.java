@@ -26,11 +26,17 @@ public class BoxCandy implements Box {
 
     @Override
     public boolean put(Product product) {
-        if (product.getWeight() + getSummaryWeight() <= allowWeight) {
-            listProduct.add(product);
-            return true;
+
+        try {
+            if (product.getWeight() + getSummaryWeight() <= allowWeight) {
+                listProduct.add(product);
+                return true;
+            }
+            return false;
+        } catch (NullPointerException exp) {
+            return false;
+            // throw exp;
         }
-        return false;
     }
 
     @Override
